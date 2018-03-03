@@ -9,7 +9,7 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.runners.MethodSorters;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@FixMethodOrder(MethodSorters.JVM)
 class GasStationTest extends TestCase {
 
     TankData[] myTankList = new TankData[3];

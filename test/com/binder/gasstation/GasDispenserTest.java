@@ -2,11 +2,14 @@ package com.binder.gasstation;
 
 import junit.framework.TestCase;
 import org.junit.FixMethodOrder;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.junit.runners.MethodSorters;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@FixMethodOrder(MethodSorters.JVM)
 class GasDispenserTest extends TestCase {
 
     GasDispenser myDispenser;
@@ -48,8 +51,8 @@ class GasDispenserTest extends TestCase {
         assertEquals(true, myDispenser.getMeter() > 0.0);
         assertEquals(true, myDispenser.getCount() > 0);
         myDispenser.reset();
-        assertEquals(0,myDispenser.getCount());
-        assertEquals(0.0,myDispenser.getMeter());
+        assertEquals(0, myDispenser.getCount());
+        assertEquals(0.0, myDispenser.getMeter());
     }
 
 }
